@@ -189,6 +189,8 @@ allprojects {
 
     repositories {
         maven { url 'https://repo.gradle.org/gradle/libs' }
+        // for dev builds of kotlin artifacts
+        maven { url 'https://repo.gradle.org/gradle/demo' }
     }
 }
 
@@ -231,6 +233,7 @@ dependencies {
     runtime project(':launcher')
     runtime project(':wrapper')
     runtime project(":installationBeacon")
+    runtime 'org.gradle:gradle-script-kotlin:1.0.0-M1'
     gradlePlugins pluginProjects
     gradlePlugins project(':dependencyManagement')
     gradlePlugins project(':testKit')
